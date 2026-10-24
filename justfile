@@ -4,10 +4,10 @@ pull:
   git pull
 
 update:
-  nix flake update
+  npins update
 
 format:
   shopt -s globstar && nix fmt *.nix **/*.nix
 
 check:
-  nix flake check
+  nix-build -A checks.x86_64-linux
